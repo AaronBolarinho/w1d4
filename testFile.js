@@ -1,56 +1,27 @@
-var words = ["ground", "control", "to", "major", "tom"];
 
-/*
-function getword(words) {
-  for (var i = 0; i < words.length; i++) {
-    var result = words[i]
-
-    console.log(result);
-    map()
-  }
+/*var rollDie = function () {
+  return Math.floor(1 + Math.random() * 6);
 }
 
-getword(words);
+console.log(rollDie());  // 1 (for example)
+
+makeLoadedDie()
 */
 
-/*
-var word = function (words, action) {
-  for (var i = words.length - 1; i >= 0; i--) {
-    var result = words[i]
+function makeLoadedDie() {
+  var list = [5, 4, 6, 1, 6, 4, 2, 3, 3, 5];
+  var counter = 0
 
-    console.log(result);
+  return function() {
+      var roll = list[counter]
+      counter += 1
+     return roll;
+    }
   }
-}
-*/
-newArray = [];
-myArray = ['bob', 'george', 'steve', 'josh']
 
-var x = function () {
-  for (var i = 0; i < myArray.length; i++) {
-    myArray[i]
-  }
-  return myArray[i]
-}
 
-function map(myArray, x) {
-  newArray.push(myArray[x.length].length);
-  return newArray;
-};
+var rollLoadedDie = makeLoadedDie();
 
-console.log(map(myArray, x));
-
-/*
-map(words, function(word) {
-  return word.toUpperCase();
-});
-
-map(words, function(word) {
-  return word.split('').reverse().join('');
-});
-
-[6, 7, 2, 5, 3]
-
-[ "GROUND", "CONTROL", "TO", "MAJOR", "TOM" ]
-
-[ 'dnuorg', 'lortnoc', 'ot', 'rojam', 'mot' ]
-*/
+console.log(rollLoadedDie());  // 5
+console.log(rollLoadedDie());  // 4
+console.log(rollLoadedDie());  // 6

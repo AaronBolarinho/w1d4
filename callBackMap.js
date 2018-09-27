@@ -10,7 +10,7 @@ function map(list, callback) {
   return array;
 }
 
-/*map(words, function(word) {
+map(words, function(word) {
   return word.length;
 });
 
@@ -20,4 +20,4 @@ map(words, function(word) {
 
 map(words, function(word) {
   return word.split('').reverse().join('');
-});*/
+});
