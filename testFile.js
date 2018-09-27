@@ -1,27 +1,56 @@
-var array = [10, 2, 5, 1, 9];
-array.sort(function(a, b) {
-  return a - b;
-});
-console.log(array);
+var words = ["ground", "control", "to", "major", "tom"];
 
-var students = [
-  { id: 1, name: "bruce",    age: 40 },
-  { id: 2, name: "zoidberg", age: 22 },
-  { id: 3, name: "alex",     age: 22 },
-  { id: 4, name: "alex",     age: 30 }
-];
+/*
+function getword(words) {
+  for (var i = 0; i < words.length; i++) {
+    var result = words[i]
 
-// sort by name
-students.sort(function(a, b) {
-  var nameA = a.name.toUpperCase(); // ignore upper and lowercase
-  var nameB = b.name.toUpperCase(); // ignore upper and lowercase
-  if (nameA < nameB) {
-    return -1;
+    console.log(result);
+    map()
   }
-  if (nameA > nameB) {
-    return 1;
-  } if (nameA === nameB)
-    return a.age - b.age;
+}
+
+getword(words);
+*/
+
+/*
+var word = function (words, action) {
+  for (var i = words.length - 1; i >= 0; i--) {
+    var result = words[i]
+
+    console.log(result);
+  }
+}
+*/
+newArray = [];
+myArray = ['bob', 'george', 'steve', 'josh']
+
+var x = function () {
+  for (var i = 0; i < myArray.length; i++) {
+    myArray[i]
+  }
+  return myArray[i]
+}
+
+function map(myArray, x) {
+  newArray.push(myArray[x.length].length);
+  return newArray;
+};
+
+console.log(map(myArray, x));
+
+/*
+map(words, function(word) {
+  return word.toUpperCase();
 });
 
-console.log(students);
+map(words, function(word) {
+  return word.split('').reverse().join('');
+});
+
+[6, 7, 2, 5, 3]
+
+[ "GROUND", "CONTROL", "TO", "MAJOR", "TOM" ]
+
+[ 'dnuorg', 'lortnoc', 'ot', 'rojam', 'mot' ]
+*/
